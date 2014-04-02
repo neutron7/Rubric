@@ -14,8 +14,7 @@ import android.widget.TextView;
 
 public class ResultsFragment extends Fragment {
 	
-	@InjectView(R.id.frag3_icon) ImageView ivIcon;
-	@InjectView(R.id.frag3_text) TextView tvItemName;
+	
 	
     public static final String IMAGE_RESOURCE_ID = "iconResourceID";
     public static final String ITEM_NAME = "itemName";
@@ -36,9 +35,7 @@ public class ResultsFragment extends Fragment {
 
 
 
-          tvItemName.setText(getArguments().getString(ITEM_NAME));
-          ivIcon.setImageDrawable(view.getResources().getDrawable(
-                      getArguments().getInt(IMAGE_RESOURCE_ID)));
+         
           return view;
     }
 

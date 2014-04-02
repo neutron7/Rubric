@@ -26,6 +26,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class MainActivity extends Activity {
@@ -33,6 +34,8 @@ public class MainActivity extends Activity {
 	
 	@InjectView(R.id.drawer_layout) DrawerLayout mDrawerLayout;
     @InjectView(R.id.left_drawer) ListView mDrawerList;
+
+    
     private ActionBarDrawerToggle mDrawerToggle;
 
     private CharSequence mDrawerTitle;
@@ -41,6 +44,7 @@ public class MainActivity extends Activity {
 
     List<DrawerItem> dataList;
 	
+ 
 	
 	@SuppressLint("NewApi")
 	@Override
@@ -57,7 +61,7 @@ public class MainActivity extends Activity {
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow,
                     GravityCompat.START);
         
-        
+
         
         
         dataList.add(new DrawerItem("Setup Network", R.drawable.network));

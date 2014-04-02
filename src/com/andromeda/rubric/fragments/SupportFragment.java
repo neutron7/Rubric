@@ -15,8 +15,7 @@ import com.andromeda.rubric.activities.R;
 public class SupportFragment extends Fragment {
 	
 	
-	@InjectView(R.id.frag4_icon) ImageView ivIcon;
-	@InjectView(R.id.frag4_text) TextView tvItemName;
+
 	
     public static final String IMAGE_RESOURCE_ID = "iconResourceID";
     public static final String ITEM_NAME = "itemName";
@@ -33,13 +32,7 @@ public class SupportFragment extends Fragment {
 
           View view = inflater.inflate(R.layout.support_fragment, container,
                       false);
-          ButterKnife.inject(this, view);
-
-
-
-          tvItemName.setText(getArguments().getString(ITEM_NAME));
-          ivIcon.setImageDrawable(view.getResources().getDrawable(
-                      getArguments().getInt(IMAGE_RESOURCE_ID)));
+ 
           return view;
     }
 
